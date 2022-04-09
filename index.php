@@ -8,7 +8,7 @@
     <title>Spletna trgovina</title>
 </head>
 <body>
-    <!-- NAVIGATION BAR -->
+    <!--- NAVIGATION BAR --->
     <nav>
         <div class="nav-logo"> <h4>SPLETNA TRGOVINA</h4> </div>
         
