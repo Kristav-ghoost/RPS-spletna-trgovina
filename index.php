@@ -7,10 +7,15 @@
     <title>Spletna trgovina</title>
 </head>
 <body>
-    <p>Pozdravljen</p>
+    <p>Forma</p>
     <form action="index.php">
-        Ime: <input type="text">
-        Geslo: <input type="password" name="geslo" id="geslo">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="Username" />
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" />
+
+        <input type="submit" name="submit" value="Login">
     </form>
 </body>
 </html>
