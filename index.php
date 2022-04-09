@@ -8,5 +8,9 @@
 </head>
 <body>
     <p>Pozdravljen</p>
+    <form action="index.php">
+        Ime: <input type="text">
+        Geslo: <input type="password" name="geslo" id="geslo">
+    </form>
 </body>
 </html>
