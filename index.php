@@ -12,7 +12,7 @@
 <body class="d-flex flex-column min-vh-100">
     <!--- NAVIGATION BAR --->
     <nav>
-        <div class="nav-logo"> <h4>SPLETNA TRGOVINA</h4> </div>
+        <div class="nav-logo"> <h4>Spletna </h4> </div>
         
         <ul class="nav-a">
             <li><a href="#">Domov</a></li>
@@ -22,7 +22,7 @@
         </ul>
     </nav>
     <footer class="page-footer font-small blue pt-4 fixed-bottom">
-        <div class="footer-copyright text-center py-3">© 2022 Copyright:
+        <div class="footer-copyright text-center py-3">© 2022 Copyright: jaz in jaz
         <a href="/"> Programerz</a>
         </div>
     </footer>
