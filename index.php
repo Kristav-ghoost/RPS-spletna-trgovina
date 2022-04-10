@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>Spletna trgovina</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!--- NAVIGATION BAR --->
     <nav>
         <div class="nav-logo"> <h4>SPLETNA TRGOVINA</h4> </div>
@@ -19,5 +21,10 @@
             <li><a href="#">Registracija</a></li>
         </ul>
     </nav>
-</body>
+    <footer class="page-footer font-small blue pt-4 fixed-bottom">
+        <div class="footer-copyright text-center py-3">© 2022 Copyright:
+        <a href="/"> Programerz</a>
+        </div>
+    </footer>
+ </body>
 </html>
