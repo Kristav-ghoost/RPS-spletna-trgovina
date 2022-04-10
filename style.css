@@ -60,3 +60,8 @@ nav:hover{
 .nav-a li{
     list-style: none;
 }
+
+.footer-copyright {
+    background-color:#263238;
+    color: rgb(202, 202, 202);
+}
