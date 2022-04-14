@@ -18,7 +18,7 @@
             <li><a href="#">Domov</a></li>
             <li><a href="#">O nas</a></li>
             <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Registracija</a></li>
+            <li><a href="register.php"">Registracija</a></li>
         </ul>
     </nav>
     <footer class="page-footer font-small blue pt-4 fixed-bottom">
