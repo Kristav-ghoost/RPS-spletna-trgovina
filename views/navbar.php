@@ -17,7 +17,7 @@
                 <a href="register.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-user"></span><span class="d-none d-sm-inline px-1">Registracija</span></a>
             </li>
             <li class="nav-item text-center" id="login-btn">
-                <a href="#" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-sign-in"></span><span class="d-none d-sm-inline px-1"> Prijava </span></a>
+                <a href="login.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-sign-in"></span><span class="d-none d-sm-inline px-1"> Prijava </span></a>
             </li>
         </ul>
     </div>
