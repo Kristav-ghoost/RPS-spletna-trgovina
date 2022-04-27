@@ -1,6 +1,9 @@
+<?php 
+include 'views/head.php';
+include 'glava.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'views/head.php';?>
 
 <body class="d-flex flex-column min-vh-100">
     <?php include 'views/navbar.php';?>
