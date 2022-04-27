@@ -13,12 +13,18 @@
             </li>
         </ul>
         <ul class="nav navbar-nav">
+            <?php if (!isset($_SESSION["user"])){?>
             <li class="nav-item text-center" id="signup-btn">
                 <a href="register.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-user"></span><span class="d-none d-sm-inline px-1">Registracija</span></a>
             </li>
             <li class="nav-item text-center" id="login-btn">
                 <a href="login.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-sign-in"></span><span class="d-none d-sm-inline px-1"> Prijava </span></a>
             </li>
+            <?php }else{ ?>
+                <li class="nav-item text-center" id="logout-btn">
+                <a href="odjava.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-sign-in"></span><span class="d-none d-sm-inline px-1"> Odjava </span></a>
+            </li>
+            <?php } ?>
         </ul>
     </div>
 </nav>
