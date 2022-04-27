@@ -23,11 +23,11 @@ class User {
 
     public static function Register($username,$password,$email,$first_name,$last_name,$phone_number){
         global $conn;//povezava z bazo
-        $username = mysqli_real_escape_string($conn, $username);
-        $email = mysqli_real_escape_string($conn, $email);
-        $first_name = mysqli_real_escape_string($conn, $first_name);
-        $last_name = mysqli_real_escape_string($conn, $last_name);
-        $phone_number = mysqli_real_escape_string($conn, $phone_number);
+        $username = $conn->real_escape_string($username);
+        $email = $conn->real_escape_string($email);
+        $first_name = $conn->real_escape_string($first_name);
+        $last_name = $conn->real_escape_string($last_name);
+        $phone_number = $conn->real_escape_string($phone_number);
         $pass = password_hash($password, PASSWORD_ARGON2ID);
 
         $sql1 = "SELECT * FROM user WHERE username='$username' OR email='$email' LIMIT 1";
@@ -38,8 +38,24 @@ class User {
             $sql2 = "INSERT INTO user (username,password,email,first_name,last_name,phone_number,registration_time) VALUES ('$username','$pass','$email','$first_name','$last_name','$phone_number',now())";
             $result = $conn->query($sql2);
             return true;
+        }else{//drugac vrne false
+            return false;
         }
-        else{//drugac vrne false
+    }
+
+    public static function Login($username, $password){
+        global $conn;//povezava z bazo
+        $username = $conn->real_escape_string($username);
+
+        $sql = "SELECT * FROM user WHERE username='$username'";
+        $result = $conn->query($sql);
+        if ($user = $result->fetch_object()){
+            if(password_verify($password, $user->password)){
+                return $user;
+            }else{
+                return false;
+            }
+        }else{
             return false;
         }
     }
