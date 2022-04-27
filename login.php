@@ -1,6 +1,13 @@
+<?php 
+include 'views/head.php';
+include 'glava.php';
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'views/head.php';?>
+
 
 <body class="d-flex flex-column min-vh-100">
     <?php include 'views/navbar.php';?>
@@ -34,7 +41,7 @@
                     </div>
 
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                        <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                        <button type="submit" name="submit" class="btn btn-primary btn-lg">Login</button>
                     </div>
 
                     </form>
