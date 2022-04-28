@@ -33,7 +33,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li class="w-100">
-                            <a class="dropdown-item" href="#"><span class="fa fa-user-circle"></span><span class="d-none d-sm-inline px-1">Profil</span></a>
+                            <a class="dropdown-item" href="profile.php"><span class="fa fa-user-circle"></span><span class="d-none d-sm-inline px-1">Profil</span></a>
                         </li>
                     </ul>
                 </li>
