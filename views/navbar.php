@@ -9,12 +9,9 @@
                 <a href="#" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-circle-info"></span><span class="d-none d-sm-inline px-1">O nas</span></a>
             </li>
             <li class="nav-item text-center">
-                <a href="#" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-address-book"></span><span class="d-none d-sm-inline  px-1">Kontakt</span></a>
+                <a href="kontakt.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-address-book"></span><span class="d-none d-sm-inline  px-1">Kontakt</span></a>
             </li>
             <?php if (isset($_SESSION["user"])){?>
-            <li class="nav-item text-center">
-                <a href="dodajArtikel.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-plus"></span><span class="d-none d-sm-inline  px-1">Dodaj artikel</span></a>
-            </li>
             <?php }else{ ?>
             <?php } ?>
         </ul>
@@ -33,7 +30,10 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li class="w-100">
-                            <a class="dropdown-item" href="#"><span class="fa fa-user-circle"></span><span class="d-none d-sm-inline px-1">Profil</span></a>
+                            <a class="dropdown-item" href="profile.php"><span class="fa fa-user-circle"></span><span class="d-none d-sm-inline px-1">Profil</span></a>
+                        </li>
+                        <li class="w-100">
+                            <a class="dropdown-item" href="dodajArtikel.php"><span class="fa fa-plus"></span><span class="d-none d-sm-inline  px-1">Dodaj artikel</span></a>
                         </li>
                     </ul>
                 </li>
