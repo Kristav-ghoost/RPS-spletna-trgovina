@@ -22,6 +22,8 @@
             </li>
             <?php }else{ ?>
                 <li class="nav-item text-center" id="logout-btn">
+                <a href="profile.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-user-circle"></span><span class="d-none d-sm-inline px-1"> Profil </span></a>
+                <li class="nav-item text-center" id="logout-btn">
                 <a href="odjava.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-sign-in"></span><span class="d-none d-sm-inline px-1"> Odjava </span></a>
             </li>
             <?php } ?>
