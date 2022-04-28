@@ -24,6 +24,9 @@
                 <a href="login.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-sign-in"></span><span class="d-none d-sm-inline px-1"> Prijava </span></a>
             </li>
             <?php }else{ ?>
+                <li class="nav-item text-center" id="logout-btn">
+                    <a href="cart.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-shopping-cart"></span><span class="d-none d-sm-inline px-1"> Košarica </span></a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Račun(<?php echo $_SESSION["user"] ?>)
