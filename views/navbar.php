@@ -6,7 +6,7 @@
                 <a href="index.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-house"></span><span class="d-none d-sm-inline  px-1">Domov</span></a>
             </li>
             <li class="nav-item text-center">
-                <a href="#" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-circle-info"></span><span class="d-none d-sm-inline px-1">O nas</span></a>
+                <a href="o_nas.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-circle-info"></span><span class="d-none d-sm-inline px-1">O nas</span></a>
             </li>
             <li class="nav-item text-center">
                 <a href="kontakt.php" class="nav-link" data-toggle="modal" data-target="#"><span class="fa fa-address-book"></span><span class="d-none d-sm-inline  px-1">Kontakt</span></a>
