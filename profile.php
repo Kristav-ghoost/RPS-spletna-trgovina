@@ -9,7 +9,7 @@ $user = User::GetUser($id);
 
 if(isset($_POST["poslji"])){
     $id = $_SESSION["id"];
-    User::UpdateUser($id,$_POST["username"],$_POST["password"],$_POST["first_name"],$_POST["last_name"],$_POST["email"],$_POST["phone"]);
+    User::UpdateUser($id,$_POST["username"],$_POST["first_name"],$_POST["last_name"],$_POST["email"],$_POST["phone"]);
     header("location: profile.php");
 }
 
@@ -34,12 +34,12 @@ if(isset($_POST["poslji"])){
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-12"><label class="labels">Username</label><input name="username" type="text" class="form-control" placeholder="" value="<?php echo $user->username ?>"></div>
-                    <div class="col-md-12"><label class="labels">Password</label><input name = "password" type="password" class="form-control" placeholder="" value=""></div>
                     <div class="col-md-12"><label class="labels">Telefonska stevilka</label><input name="phone" type="text" class="form-control" placeholder="" value="<?php echo $user->phone_number ?>"></div>
                     <div class="col-md-12"><label class="labels">Email</label><input name="email" type="text" class="form-control" placeholder="" value="<?php echo $user->email ?>"></div>
 
                 </div>
                 <div class="mt-5 text-center"><input class="btn btn-primary profile-button" type="submit" name="poslji" value="Shrani Podatke" /></div>
+                <div class="mt-5 text-center"><a  href ="changePassword.php">Spremeni geslo </a></div>
             </form>
             </div>
         </div>

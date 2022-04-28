@@ -71,17 +71,28 @@ class User {
         return null;
     }
 
-    public static function UpdateUser($id,$username,$password,$first_name, $last_name, $email,$phone_number){
+    public static function UpdateUser($id,$username,$first_name, $last_name, $email,$phone_number){
         global $conn;//povezava z bazo
         $username = $conn->real_escape_string($username);
         $email = $conn->real_escape_string($email);
         $first_name = $conn->real_escape_string($first_name);
         $last_name = $conn->real_escape_string($last_name);
         $phone_number = $conn->real_escape_string($phone_number);
-        $pass = password_hash($password, PASSWORD_ARGON2ID);
-        $query = "UPDATE user SET username = '$username', email = '$email', first_name = '$first_name', last_name ='$last_name', phone_number = '$phone_number', password = '$pass'  WHERE user_id = $id;";
+        $query = "UPDATE user SET username = '$username', email = '$email', first_name = '$first_name', last_name ='$last_name', phone_number = '$phone_number'  WHERE user_id = $id;";
 	    $res = $conn->query($query);
 
+    }
+
+    public static function UpdatePassword($id,$pass1, $pass2){
+        global $conn;
+        if($pass1 == $pass2){
+            $password = password_hash($pass1, PASSWORD_ARGON2ID);
+            $query = "UPDATE user SET password = '$password' WHERE user_id = $id;";
+            $res = $conn->query($query);
+        }
+        else{
+            return "Gesli se ne ujemata";
+        }
     }
 }
 ?>
