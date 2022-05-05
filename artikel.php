@@ -18,8 +18,8 @@ include 'glava.php';
                 <div class="card">
                     <div class="demo">
                         <ul id="lightSlider">
-                            <li data-thumb="https://wallpaperaccess.com/full/2665514.jpg"> <img src="https://wallpaperaccess.com/full/2665514.jpg" /> </li>
-                            <li data-thumb="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4uPw5zlsCR94cwrDehcEeBufwIntzSFxGFg&usqp=CAU"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4uPw5zlsCR94cwrDehcEeBufwIntzSFxGFg&usqp=CAU" /> </li>
+                            <li data-thumb="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg"> <img src="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg" /> </li>
+                            <li data-thumb="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg"> <img src="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg" /> </li>
                             <li data-thumb="https://i.imgur.com/DhKkTrG.jpg"> <img src="https://i.imgur.com/DhKkTrG.jpg" /> </li>
                             <li data-thumb="https://i.imgur.com/kYWqL7k.jpg"> <img src="https://i.imgur.com/kYWqL7k.jpg" /> </li>
                         </ul>
