@@ -28,8 +28,8 @@ include 'glava.php';
                             <div class="product-grid2">
                                 <div class="product-image2">
                                     <a href="#">
-                                        <img class="pic-1" src="https://wallpaperaccess.com/full/2665514.jpg">
-                                        <img class="pic-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4uPw5zlsCR94cwrDehcEeBufwIntzSFxGFg&usqp=CAU">
+                                        <img class="pic-1" src="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg">
+                                        <img class="pic-2" src="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg">
                                     </a>
                                     <ul class="social">
                                         <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
