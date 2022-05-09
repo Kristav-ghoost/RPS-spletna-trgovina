@@ -5,7 +5,7 @@ include 'glava.php';
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
-<body class="d-flex flex-column min-vh-100">
+<main class="d-flex flex-column min-vh-100">
     <?php include 'views/navbar.php';?>
 
     <!-- SEARCH BAR -->
@@ -66,11 +66,10 @@ include 'glava.php';
             <?php } ?>
         </div>
         </section>
+</main>
     <a href="./cart.php" class="float">
         <i class="fa fa-shopping-cart my-float"></i>
     </a>
-    <!--</div>-->
-
     <?php include 'views/footer.php';?>
 </body>
 </html>
