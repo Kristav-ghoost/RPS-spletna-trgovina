@@ -27,11 +27,11 @@ include 'glava.php';
                     <?php for($j = 1; $j <= 4; $j++){ ?>
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <div id="product-2" class="single-product">
-                                <div class="part-1" style="background: url(https://i.ibb.co/cLnZjnS/2.jpg) no-repeat center;  background-size: cover; ">
+                                <div class="part-1" style="background: url(https://www.tradeinn.com/f/13758/137583821/adidas-real-madrid-third-20-21-t-shirt.jpg) no-repeat center;  background-size: cover; ">
                                     <span class="discount">15% off</span>
                                     <ul>
-                                        <li><a class="article-icons" href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                        <li><a class="article-icons"  href="#"><i class="fas fa-heart"></i></a></li>
+                                        <li><a class="article-icons" href="#"><i class="fa-solid fa-cart-plus"></i></a></li>
+                                        <li><a class="article-icons"  href="#"><i class="fa-regular fa-heart"></i></a></li>
                                         <li><a class="article-icons"  href="#"><i class="fas fa-plus"></i></a></li>
                                         <li><a class="article-icons"  href="#"><i class="fas fa-expand"></i></a></li>
                                     </ul>
@@ -67,7 +67,7 @@ include 'glava.php';
         </div>
         </section>
     <a href="./cart.php" class="float">
-        <i class="fa fa-plus my-float"></i>
+        <i class="fa fa-shopping-cart my-float"></i>
     </a>
     <!--</div>-->
 
