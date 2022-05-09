@@ -3,7 +3,7 @@ include 'views/head.php';
 include 'glava.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <body class="d-flex flex-column min-vh-100">
     <?php include 'views/navbar.php';?>
@@ -17,24 +17,42 @@ include 'glava.php';
     </div> 
 
 
-    <!-- LAYOUT -->
-    <div style="margin: 100px;">
+    <!-- LAYOUT
+    <div style="margin: 100px;">-->
+        <section class="section-products">
         <div class="container">
 
             <?php for($i = 1; $i <= 3; $i++){ ?>
-                <div class="row">
+                <div class="row justify-content-center text-center">
                     <?php for($j = 1; $j <= 4; $j++){ ?>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="product-grid2">
-                                <div class="product-image2">
-                                    <a href="#">
-                                        <img class="pic-1" src="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg">
-                                        <img class="pic-2" src="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg">
-                                    </a>
-                                    <ul class="social">
-                                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div id="product-2" class="single-product">
+                                <div class="part-1" style="background: url(https://i.ibb.co/cLnZjnS/2.jpg) no-repeat center;  background-size: cover; ">
+                                    <span class="discount">15% off</span>
+                                    <ul>
+                                        <li><a class="article-icons" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a class="article-icons"  href="#"><i class="fas fa-heart"></i></a></li>
+                                        <li><a class="article-icons"  href="#"><i class="fas fa-plus"></i></a></li>
+                                        <li><a class="article-icons"  href="#"><i class="fas fa-expand"></i></a></li>
                                     </ul>
+                                </div>
+                                <div class="part-2">
+                                    <h3 class="product-title">Here Product Title</h3>
+                                    <h4 class="product-price">$49.99</h4>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- <div class="col-md-3 col-sm-6">
+                         <div class="product-grid2">
+                             <div class="product-image2">
+                                 <a href="#">
+                                     <img class="pic-1" src="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg">
+                                     <img class="pic-2" src="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg">
+                                 </a>
+                                 <ul class="social">
+                                     <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                     <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                 </ul>
                                     <a class="add-to-cart" href="#">Add to cart</a>
                                 </div>
                                 <div class="product-content">
@@ -42,14 +60,16 @@ include 'glava.php';
                                     <span class="price">$420.69</span>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     <?php } ?>    
                 </div>
             <?php } ?>
-
         </div>
-    </div>
-
+        </section>
+    <a href="./cart.php" class="float">
+        <i class="fa fa-plus my-float"></i>
+    </a>
+    <!--</div>-->
 
     <?php include 'views/footer.php';?>
 </body>
