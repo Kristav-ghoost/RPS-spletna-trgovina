@@ -6,7 +6,7 @@ $err = "";
 
 if (isset($_POST['submit'])) {
     if($product = Product::AddProduct($_POST['imeartikel'],$_POST['opis'],$_POST['cena'],$_FILES['slika'],$_SESSION['id'])) {
-        //header('location: index.php');
+        header('location: index.php');
     } else {
         $err = "Nemorem dodati artikla!";
     }

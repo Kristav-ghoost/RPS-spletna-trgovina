@@ -22,8 +22,8 @@ class Product {
         $name = $conn->real_escape_string($name);
         $description = $conn->real_escape_string($description);
         
-        $img = basename("images/".$image['name']);
-        move_uploaded_file($image['tmp_name'],"images/".$img);
+        $img = basename("images/".uniqid().'-'.date("Y-m-d").$image['name']);
+        move_uploaded_file($image['tmp_name'],"/var/www/images/".$img);
 
         $sql1 = "INSERT INTO product (name,description,price,image,user_tk) VALUES ('$name','$description','$price','$img','$user_tk')";
         if($conn->query($sql1)) {
