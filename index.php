@@ -15,6 +15,21 @@ if(isset($_POST["poslji"])){
     //echo $items['img_path'];
 }
 
+function get_products(){
+	global $conn;
+    $query = "SELECT * FROM product";
+
+	$res = $conn->query($query);
+	$oglasi = array();
+	while($oglas = $res->fetch_object()){
+		array_push($oglasi, $oglas);
+	}
+	return $oglasi;
+}
+
+$artikli = get_products();
+$counter = 0;
+
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -36,15 +51,18 @@ if(isset($_POST["poslji"])){
         <section class="section-products">
         <div class="container">
 
-            <?php for($i = 1; $i <= 3; $i++){ ?>
-                <div class="row justify-content-center text-center">
-                    <?php for($j = 1; $j <= 4; $j++){ ?>
+            <?php foreach($artikli as $artikel){
+                if($counter % 4 == 0) { ?>
+                    <div class="row justify-content-center text-center">
+                <?php } $counter++;?>
+                
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <form action="index.php" method="POST" enctype="multipart/form-data">
                                     <div id="product-2" class="single-product">
-                                        <input type="hidden" name = "img_path" value = "https://www.tradeinn.com/f/13758/137583821/adidas-real-madrid-third-20-21-t-shirt.jpg"></input>
-                                        <div class="part-1" style="background: url(https://www.tradeinn.com/f/13758/137583821/adidas-real-madrid-third-20-21-t-shirt.jpg) no-repeat center;  background-size: cover; ">
-                                            <span class="discount">15% off</span>
+                                        <input type="hidden" name = "img_path" value = "https://www.zurnal24.si/media/img/f0/5c/0026e0396e4feb8faf55.jpeg"></input>
+                                        <div class="part-1" style="background: url(https://www.zurnal24.si/media/img/f0/5c/0026e0396e4feb8faf55.jpeg) no-repeat center;  background-size: cover; ">
+                                          
+                                        <!-- <span class="discount">15% off</span> -->
                                             <ul>
                                                 <li><a class="article-icons" href="#"><i class="fa-solid fa-cart-plus"></i></a></li>
                                                 <li><a class="article-icons"  href="#"><i class="fa-regular fa-heart"></i></a></li>
@@ -53,39 +71,18 @@ if(isset($_POST["poslji"])){
                                             </ul>
                                         </div>
                                         <div class="part-2">
-                                            <!-- <h3 class="product-title">Here Product Title</h3> -->
-                                            <input type="hidden" name="pro_name" value="Here Product Title"> Here Product Title </input>
-                                            <!-- <h4 class="product-price">$49.99</h4> -->
-                                            <input type="hidden" name="pro_price" value="49.99"> 49.99 </input>
+                                            <input type="hidden" name="pro_name" value="<?php echo $artikel->name; ?>"> <?php echo $artikel->name; ?> </input>
+                                            <input type="hidden" name="pro_price" value="<?php echo $artikel->price; ?>"> <?php echo $artikel->price; ?>$ </input> <br>
                                             <input class="btn btn-primary profile-button" type="submit" name="poslji" value="Dodaj v kosarico" />
                                         </div>
                                     </div>
                             </form>
                         </div>
-                    <!-- <div class="col-md-3 col-sm-6">
-                         <div class="product-grid2">
-                             <div class="product-image2">
-                                 <a href="#">
-                                     <img class="pic-1" src="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg">
-                                     <img class="pic-2" src="https://www.tuningblog.eu/wp-content/uploads/2019/03/BMW-M3-E30-Restomod-Turbo-Tuning-Redux-Leichtbau-3.jpg">
-                                 </a>
-                                 <ul class="social">
-                                     <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
-                                     <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                 </ul>
-                                    <a class="add-to-cart" href="#">Add to cart</a>
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a href="artikel.php">Beetlejuice</a></h3>
-                                    <span class="price">$420.69</span>
-                                </div>
-                            </div>
-                        </div>-->
                     <?php } ?>    
                 </div>
-            <?php } ?>
         </div>
         </section>
+        <!-- <img src="./images/rps/6286974285122-2022-05-19Isolated_basketball.png">   -->
 </main>
     <a href="./cart.php" class="float">
         <i class="fa fa-shopping-cart my-float"></i>
