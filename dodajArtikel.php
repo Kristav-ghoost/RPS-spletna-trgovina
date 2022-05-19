@@ -1,6 +1,16 @@
 <?php 
 include 'views/head.php';
 include 'glava.php';
+include_once 'classes/product.php';
+$err = "";
+
+if (isset($_POST['submit'])) {
+    if($product = Product::AddProduct($_POST['imeartikel'],$_POST['opis'],$_POST['cena'],$_FILES['slika'],$_SESSION['id'])) {
+        //header('location: index.php');
+    } else {
+        $err = "Nemorem dodati artikla!";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +27,7 @@ include 'glava.php';
 
                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Dodaj artikel</p>
 
-                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" class="mx-1 mx-md-4">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" class="mx-1 mx-md-4">
 
                     <div class="d-flex flex-row align-items-center mb-4">
                         <i class="fa fa-text-width fa-lg me-3 fa-fw"></i>
@@ -43,9 +53,18 @@ include 'glava.php';
                         </div>
                     </div>
 
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-image fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="slika">Slika</label>
+                            <input type="file" id="slika" name="slika" class="form-control" />
+                        </div>
+                    </div>
+
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                         <button type="submit" name="submit" class="btn btn-primary btn-lg">Dodaj</button>
                     </div>
+                    <?php echo $err;?>
                     </form>
                 </div>
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
