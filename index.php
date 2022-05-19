@@ -59,8 +59,12 @@ $counter = 0;
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <form action="index.php" method="POST" enctype="multipart/form-data">
                                     <div id="product-2" class="single-product">
-                                        <input type="hidden" name = "img_path" value = "https://www.zurnal24.si/media/img/f0/5c/0026e0396e4feb8faf55.jpeg"></input>
-                                        <div class="part-1" style="background: url(https://www.zurnal24.si/media/img/f0/5c/0026e0396e4feb8faf55.jpeg) no-repeat center;  background-size: cover; ">
+                                        <?php 
+                                        $image = file_get_contents('/mnt/rps/' . $artikel->image);
+                                        $image_codes = base64_encode($image);
+                                        ?>
+                                        <input type="hidden" name = "img_path" value = "data:image/jpg;charset=utf-8;base64,<?php echo $image_codes ?>"></input>
+                                        <div class="part-1" style="background: url(data:image/jpg;charset=utf-8;base64,<?php echo $image_codes ?>) no-repeat center;  background-size: cover; ">
                                           
                                         <!-- <span class="discount">15% off</span> -->
                                             <ul>
