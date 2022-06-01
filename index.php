@@ -63,20 +63,21 @@ $counter = 0;
                                         $image = file_get_contents('/mnt/rps/' . $artikel->image);
                                         $image_codes = base64_encode($image);
                                         ?>
+                                        <input type="hidden" name="pro_name" value="<?php echo $artikel->name; ?>"> <b><?php echo $artikel->name; ?> </b></input>
                                         <input type="hidden" name = "img_path" value = "data:image/jpg;charset=utf-8;base64,<?php echo $image_codes ?>"></input>
-                                        <div class="part-1" style="background: url(data:image/jpg;charset=utf-8;base64,<?php echo $image_codes ?>) no-repeat center;  background-size: cover; ">
+                                        <div class="part-1" style="background: url(data:image/jpg;charset=utf-8;base64,<?php echo $image_codes ?>) no-repeat center;  background-size: cover; object-fit: scale-down;">
                                           
                                         <!-- <span class="discount">15% off</span> -->
                                             <ul>
                                                 <li><a class="article-icons" href="#"><i class="fa-solid fa-cart-plus"></i></a></li>
                                                 <li><a class="article-icons"  href="#"><i class="fa-regular fa-heart"></i></a></li>
                                                 <li><a class="article-icons"  href="#"><i class="fas fa-plus"></i></a></li>
-                                                <li><a class="article-icons"  href="#"><i class="fas fa-expand"></i></a></li>
+                                                <li><a class="article-icons"  href="artikel.php?id=<?php echo $artikel->id_product; ?>"><i class="fas fa-expand"></i></a></li>
                                             </ul>
                                         </div>
                                         <div class="part-2">
-                                            <input type="hidden" name="pro_name" value="<?php echo $artikel->name; ?>"> <?php echo $artikel->name; ?> </input>
-                                            <input type="hidden" name="pro_price" value="<?php echo $artikel->price; ?>"> <?php echo $artikel->price; ?>$ </input> <br>
+                                            <!-- <input type="hidden" name="pro_name" value= </input> -->
+                                            <input type="hidden" name="pro_price" value="<?php echo $artikel->price; ?>">Cena: <b>$<?php echo $artikel->price; ?> </b></input> <br>
                                             <input class="btn btn-primary profile-button" type="submit" name="poslji" value="Dodaj v kosarico" />
                                         </div>
                                     </div>

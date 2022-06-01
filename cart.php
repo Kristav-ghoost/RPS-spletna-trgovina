@@ -69,7 +69,7 @@ $user = User::GetUser($id);
         <div class="card mb-4">
           <div class="card-body">
             <p><strong>Dostava na dom:</strong></p>
-            <p class="mb-0">12.10.2020 - 14.10.2020</p>
+            <p class="mb-0">1.1.2022 - 31.12.2022</p>
           </div>
         </div>
       </div>
