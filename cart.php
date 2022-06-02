@@ -3,10 +3,30 @@ include 'views/head.php';
 include 'glava.php';
 include 'views/navbar.php';
 include_once 'classes/user.php';
+include_once 'classes/product.php';
 
 $id = $_SESSION["id"];
 $user = User::GetUser($id);
+$total = 0;
+if(isset($_POST["delete"])){
+  foreach($_SESSION["cart"] as $keys => $values){
+    if($values['item_name'] == $_POST["Pname"] ){
+      unset($_SESSION['cart'][$keys]); 
+    }
+  }
+}
 
+if(isset($_POST["checkout"])){
+    $checkoutName = $_POST["Cname"];
+    if($res = Product::CheckoutProduct($checkoutName)){
+      foreach($_SESSION["cart"] as $keys => $values){
+        if($values['item_name'] == $checkoutName ){
+          unset($_SESSION['cart'][$keys]); 
+        }
+      }
+      header("location: thankyoupage.php");
+    }
+}
 
 
 ?>
@@ -40,10 +60,10 @@ $user = User::GetUser($id);
               <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
                 <!-- Data -->
                 <p><strong><?php echo $values['item_name'] ?></strong></p>
-                <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
-                  title="Remove item">
-                  <i class="fas fa-trash"></i>
-                </button>
+                <form action="cart.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="Pname" value="<?php echo $values['item_name']; ?>">
+                <input class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" type="submit" name="delete" value="Remove"/>
+                </form>
                 <!-- Data -->
               </div>
                 <!-- Price -->
@@ -83,7 +103,8 @@ $user = User::GetUser($id);
               <li
                 class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                 Products
-                <span><?php  echo $total?> €</span>
+                
+                <span><?php echo $total ?> €</span>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                 Poštnina
@@ -101,9 +122,10 @@ $user = User::GetUser($id);
               </li>
             </ul>
 
-            <button type="button" class="btn btn-primary btn-lg btn-block">
-              Go to checkout
-            </button>
+            <form action="cart.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="Cname" value="<?php echo $values['item_name']; ?>">
+            <input class="btn btn-primary btn-lg btn-block" type="submit" name="checkout" value="Checkout"/>
+            </form>
           </div>
         </div>
       </div>
