@@ -32,5 +32,15 @@ class Product {
             return false;
         }
     }
+
+    public static function DeleteProduct($id){
+        global $conn;//povezava z bazo
+        $sql1 = "DELETE FROM product WHERE id_product = $id";
+        if($conn->query($sql1)) {
+            return true;
+        } else {
+            return false;
+        }
+    } 
 }
 ?>
