@@ -72,6 +72,9 @@ $counter = 0;
                                                 <li><a class="article-icons" href="#"><i class="fa-solid fa-cart-plus"></i></a></li>
                                                 <li><a class="article-icons"  href="#"><i class="fa-regular fa-heart"></i></a></li>
                                                 <li><a class="article-icons"  href="#"><i class="fas fa-plus"></i></a></li>
+                                                <?php if(isset($_SESSION["id"]) && ($_SESSION["id"] == $artikel->user_tk)) {?> 
+                                                    <li><a class="article-icons" href="izbrisiArtikel.php?id=<?php echo $artikel->id_product; ?>"><i class="fas fa-minus"></i></a></li>
+                                                <?php } ?>
                                                 <li><a class="article-icons"  href="artikel.php?id=<?php echo $artikel->id_product; ?>"><i class="fas fa-expand"></i></a></li>
                                             </ul>
                                         </div>
