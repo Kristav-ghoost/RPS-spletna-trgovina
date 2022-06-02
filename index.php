@@ -2,17 +2,18 @@
 include 'views/head.php';
 include 'glava.php';
 
-
+$index = 0;
+$_SESSION["cart"] = array();
 if(isset($_POST["poslji"])){
-    
+
     $items = array(
         'item_name' => $_POST["pro_name"],
         'item_price' => $_POST["pro_price"],
         'img_path' => $_POST["img_path"]
     );
-    $_SESSION["cart"][0] = $items;
+
+    $_SESSION["cart"][] = $items;
     header("location: cart.php");
-    //echo $items['img_path'];
 }
 
 function get_products(){

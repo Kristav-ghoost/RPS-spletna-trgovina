@@ -42,5 +42,14 @@ class Product {
             return false;
         }
     } 
+    public static function CheckoutProduct($name){
+        global $conn;//povezava z bazo
+        $sql1 = "DELETE FROM product WHERE name = '$name'";
+        if($conn->query($sql1)) {
+            return true;
+        } else {
+            return false;
+        }
+    } 
 }
 ?>
